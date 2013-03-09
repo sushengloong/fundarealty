@@ -1,4 +1,8 @@
 FundRealty::Application.routes.draw do
+  get "pages/index"
+
+  root :to => 'pages#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
