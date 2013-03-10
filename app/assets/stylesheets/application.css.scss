@@ -15,8 +15,13 @@
  *= require_tree .
  */
 
+@import 'font-awesome';
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 @import url(http://fonts.googleapis.com/css?family=Roboto:300);
+
+.btn.btn-large [class^="icon-"], .btn.btn-large [class*=" icon-"] {
+  vertical-align: baseline;
+}
 
 #intro {
   background: image-url('intro_bg.jpg') no-repeat 20% 10%;
