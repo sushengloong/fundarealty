@@ -15,6 +15,10 @@
  *= require_tree .
  */
 
+.navbar a {
+  text-transform: uppercase;
+}
+
 .content {
   background-color: #eee;
   padding: 20px;
