@@ -4,7 +4,7 @@ module ApplicationHelper
   end
 
   def app_display_tagline
-    "Asia's First Real Estate Investment Platform"
+    "Invest In Real Estate Collectively"
   end
 
   def app_display_title
