@@ -15,6 +15,12 @@
  *= require_tree .
  */
 
+#intro {
+  background: image-url('intro_bg.jpg') no-repeat;
+  min-height: 500px;
+  min-width: 100%;
+}
+
 .navbar a {
   text-transform: uppercase;
 }
