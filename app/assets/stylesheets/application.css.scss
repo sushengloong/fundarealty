@@ -23,10 +23,6 @@
   text-align: center;
 }
 
-.btn.btn-large [class^="icon-"], .btn.btn-large [class*=" icon-"] {
-  vertical-align: baseline;
-}
-
 #intro {
   background: image-url('intro_bg.jpg') no-repeat 20% 10%;
   min-height: 520px;
@@ -45,13 +41,11 @@
 
     h1 {
       color: #fff;
-      font-family: 'Roboto', sans-serif;
       font-size: 52px;
     }
 
     h2 {
       color: rgba(255, 255, 255, 0.5);
-      font-family: 'Droid Sans', sans-serif;
       font-size: 24px;
       margin-bottom: 20px;
     }
@@ -62,11 +56,21 @@
 }
 
 #target_users {
-  padding-top: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-color: whiteSmoke;
   width: 100%;
   .container {
     .row {
+      .span4 {
+        text-align: center;
+        h3 {
+          font-size: 35px;
+          i {
+            vertical-align: 10px;
+          }
+        }
+      }
     }
   }
 }

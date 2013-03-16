@@ -1,3 +1,13 @@
 @import "bootstrap";
 body { padding-top: 40px; }
+[class^="icon-"], [class*=" icon-"] {
+  width: auto;
+  vertical-align: baseline;
+}
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+h2, h3 {
+  font-family: 'Droid Sans', sans-serif;
+}
 @import "bootstrap-responsive";
