@@ -83,7 +83,7 @@
   width: 100%;
   .container {
     .row {
-      .span4 {
+      .span5 {
         text-align: center;
         h3 {
           font-size: 35px;
@@ -99,6 +99,9 @@
           -moz-border-radius: 8px;
           border-radius: 8px;
         }
+      }
+      .span5.right_border_line {
+        border-right: 1px solid #E4E4E4;
       }
     }
   }
