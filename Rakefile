@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-FundRealty::Application.load_tasks
+Fundarealty::Application.load_tasks

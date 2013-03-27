@@ -1,6 +1,6 @@
 module ApplicationHelper
   def app_display_name
-    "Fund Realty"
+    "Fundarealty"
   end
 
   def app_display_tagline

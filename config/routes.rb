@@ -1,4 +1,4 @@
-FundRealty::Application.routes.draw do
+Fundarealty::Application.routes.draw do
   get "pages/index"
 
   root :to => 'pages#index'
