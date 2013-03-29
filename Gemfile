@@ -9,8 +9,13 @@ group :development do
   gem 'sqlite3'
 end
 
+group :test do
+  gem 'minitest-spec-rails'
+  gem 'capybara'
+end
+
 group :production do
-    gem 'pg', '~> 0.14.1'
+  gem 'pg', '~> 0.14.1'
 end
 
 # Gems used only for assets and not required
@@ -28,6 +33,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'awesome_print'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
