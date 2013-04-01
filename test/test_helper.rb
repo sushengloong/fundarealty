@@ -15,7 +15,8 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 
-  def basic_auth(name, password)
+  # login http basic auth
+  def basic_auth(name = 'demo', password = 'realestate')
     if page.driver.respond_to?(:basic_auth)
       page.driver.basic_auth(name, password)
     elsif page.driver.respond_to?(:basic_authorize)
