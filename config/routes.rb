@@ -1,7 +1,8 @@
 Fundarealty::Application.routes.draw do
   get "pages/index"
+  get "pages/prelaunch"
 
-  root :to => 'pages#index'
+  root :to => 'pages#prelaunch'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
