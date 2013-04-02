@@ -1,6 +1,7 @@
 Fundarealty::Application.routes.draw do
   get "pages/index"
   get "pages/prelaunch"
+  post "pages/invite"
 
   root :to => 'pages#prelaunch'
 

@@ -34,6 +34,7 @@ end
 
 gem 'jquery-rails'
 gem 'awesome_print'
+gem 'gibbon', '~> 0.4.6'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
