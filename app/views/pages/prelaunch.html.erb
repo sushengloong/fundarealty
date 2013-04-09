@@ -1,80 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>FundArealty - Real estate crowdfunding for the masses</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <script type="text/javascript">
-  // Google Analytics Code Starts HERE
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-39697419-1']);
-  _gaq.push(['_setDomainName', 'fundarealty.com']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-  // Google Analytics Code Ends HERE
-  </script>
-</head>
-<body id="prelaunch">
-  <div class="container">
-    <div class="row">
-      <a href="<%= root_path %>"><img id="logo" src="<%= image_path "logo.png" %>" /></a>
-    </div>
-    <div class="row">
-      <div class="span12">
-        <div class="content">
-          <h1>Real estate crowdfunding for the masses</h1>
-          <p>FundArealty is coming very soon.<br />Meanwhile, let us know who you are so that we can send you an invite when we launch.</p>
-          <% if @ret.present? %>
-            <p class="alert alert-<%= @ret[:status] %>"><%= @ret[:msg] %></p>
-          <% end %>
-          <%= form_tag pages_invite_path, method: :post, class: "form-horizontal" do |f | %>
-            <div class="control-group">
-              <label class="control-label" for="inputEmail">Email</label>
-              <div class="controls">
-                <input type="text" id="inputEmail" name="inputEmail" placeholder="Email" class="input-large" />
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label" for="inputFirstName">First Name</label>
-              <div class="controls">
-                <input type="text" id="inputFirstName" name="inputFirstName" placeholder="First Name" class="input-large" />
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label" for="inputLastName">Last Name</label>
-              <div class="controls">
-                <input type="text" id="inputLastName" name="inputLastName" placeholder="Last Name" class="input-large" />
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label" for="inputInvestRange">How much would you like to invest per annum?</label>
-              <div class="controls">
-                <select id="inputInvestRange" name="inputInvestRange">
-                  <option value="0-2499">Less than S$2,500 PA</option>
-                  <option value="2500-4999" selected>S$2,500 - S$4,999 PA</option>
-                  <option value="5000-7499">S$5,000 - S$7,499 PA</option>
-                  <option value="7500-9999">S$7,500 - S$9,999 PA</option>
-                  <option value="10000-10000">At least S$10,000 PA</option>
-                </select>
-              </div>
-            </div>
-            <p id="disclaimer">Solely for our information. Absolutely no commitment from you.</p>
-            <input type="submit" value="Request for Invite" class="btn btn-primary btn-large" />
-          <% end %>
-          <div id="footer">FundArealty &copy; 2013. East Capital Associates Pte Ltd.</div>
-        </div>
-      </div>
+<p>FundArealty is coming very soon.<br />Meanwhile, let us know who you are so that we can send you an invite when we launch.</p>
+<% if @ret.present? %>
+  <p class="alert alert-<%= @ret[:status] %>"><%= @ret[:msg] %></p>
+<% end %>
+<%= form_tag pages_invite_path, method: :post, class: "form-horizontal" do |f | %>
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">Email</label>
+    <div class="controls">
+      <input type="text" id="inputEmail" name="inputEmail" placeholder="Email" class="input-large" />
     </div>
   </div>
-</body>
-</html>
+  <div class="control-group">
+    <label class="control-label" for="inputFirstName">First Name</label>
+    <div class="controls">
+      <input type="text" id="inputFirstName" name="inputFirstName" placeholder="First Name" class="input-large" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputLastName">Last Name</label>
+    <div class="controls">
+      <input type="text" id="inputLastName" name="inputLastName" placeholder="Last Name" class="input-large" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputInvestRange">How much would you like to invest per annum?</label>
+    <div class="controls">
+      <select id="inputInvestRange" name="inputInvestRange">
+        <option value="0-2499">Less than S$2,500 PA</option>
+        <option value="2500-4999" selected>S$2,500 - S$4,999 PA</option>
+        <option value="5000-7499">S$5,000 - S$7,499 PA</option>
+        <option value="7500-9999">S$7,500 - S$9,999 PA</option>
+        <option value="10000-10000">At least S$10,000 PA</option>
+      </select>
+    </div>
+  </div>
+  <p id="prelaunch_form_remarks">Solely for our information. Absolutely no commitment from you.</p>
+  <input type="submit" value="Request for Invite" class="btn btn-primary btn-large" />
+<% end %>

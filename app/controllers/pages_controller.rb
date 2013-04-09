@@ -1,10 +1,11 @@
 class PagesController < ApplicationController
+  layout "prelaunch_application"
+
   def index
+    layout "application"
   end
 
   def prelaunch
-    # temporarily code everything in a single view file
-    render layout: false
   end
 
   def invite
@@ -19,7 +20,10 @@ class PagesController < ApplicationController
   rescue Exception => e
     @ret = { status: "error", msg: e }
   ensure
-    render :prelaunch, layout: false
+    render :prelaunch
+  end
+
+  def faq
   end
 
 end
