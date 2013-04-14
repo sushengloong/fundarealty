@@ -23,6 +23,9 @@ class PagesController < ApplicationController
     render :prelaunch
   end
 
+  def how_it_works
+  end
+
   def faq
   end
 
