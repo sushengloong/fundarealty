@@ -9,11 +9,10 @@ class PagesController < ApplicationController
   end
 
   def invite
-    raise "All fields are mandatory" if [:inputEmail, :inputFirstName, :inputLastName, :inputInvestRange].any? { |field| params[field].blank? }
-    invest_range = params[:inputInvestRange].split('-').map { |amt| amt.to_f }
+    raise "All fields are mandatory" if [:inputEmail, :inputFirstName, :inputLastName, :inputInvest].any? { |field| params[field].blank? }
 
     Gibbon.list_subscribe id: "13fe50d34b", email_address: params[:inputEmail], merge_vars: { 
-      fname: params[:inputFirstName], lname: params[:inputLastName], min_invest: invest_range[0], max_invest: invest_range[1] }
+      fname: params[:inputFirstName], lname: params[:inputLastName], invest: params[:inputInvest].to_f }
     @ret = { status: "success", msg: "You're almost done! Please check your mailbox for the confirmation email." }
   rescue Gibbon::MailChimpError => mce
     @ret = { status: "error", msg: mce }
